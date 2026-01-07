@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vSergiors · Portfolio</title>
+  <meta name="description" content="Portfolio profesional de vSergiors: desarrollo web, servidores Minecraft, diseño gráfico, edición de vídeo y miniaturas de YouTube." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --bg-soft:#121826;
+      --primary:#2bd576;
+      --secondary:#3aa0ff;
+      --text:#e6eaf0;
+      --muted:#9aa4b2;
+      --border:#1f2937;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background:linear-gradient(180deg,#0b0f14,#0a0d12);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:48px 24px;
+    }
+
+    header{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:32px;
+      align-items:center;
+      padding:96px 0 72px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      font-size:13px;
+      color:var(--primary);
+      background:rgba(43,213,118,.08);
+      width:max-content;
+    }
+
+    h1{
+      font-size:clamp(32px,5vw,56px);
+      line-height:1.1;
+      letter-spacing:-0.02em;
+    }
+
+    h1 span{color:var(--primary)}
+
+    p.lead{
+      font-size:18px;
+      color:var(--muted);
+      max-width:720px;
+    }
+
+    .cta{
+      display:flex;
+      gap:16px;
+      margin-top:24px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 20px;
+      border-radius:10px;
+      font-weight:600;
+      font-size:14px;
+      border:1px solid var(--border);
+      background:var(--bg-soft);
+      transition:.2s ease;
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#08110c;
+      border:none;
+    }
+
+    .btn:hover{transform:translateY(-2px);opacity:.95}
+
+    section{
+      margin-top:96px;
+    }
+
+    section h2{
+      font-size:32px;
+      margin-bottom:12px;
+    }
+
+    section > p{
+      color:var(--muted);
+      max-width:720px;
+      margin-bottom:32px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#121826,#0e1420);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:24px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      inset:auto -40% -40% auto;
+      width:200px;height:200px;
+      background:radial-gradient(circle,var(--primary),transparent 70%);
+      opacity:.08;
+    }
+
+    .card h3{font-size:18px;margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+
+    .tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .tag{
+      font-size:12px;
+      padding:4px 8px;
+      border-radius:6px;
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+
+    .timeline{
+      display:grid;
+      gap:24px;
+    }
+
+    .timeline-item{
+      border-left:2px solid var(--border);
+      padding-left:20px;
+    }
+
+    .timeline-item span{
+      font-size:13px;
+      color:var(--primary);
+      font-weight:600;
+    }
+
+    footer{
+      margin-top:120px;
+      padding:48px 0 24px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media(min-width:900px){
+      header{grid-template-columns:1.2fr .8fr}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div>
+        <span class="badge">Disponible para proyectos</span>
+        <h1>Soy <span>vSergiors</span><br>Dev & Creador Digital</h1>
+        <p class="lead">
+          Desarrollo webs en HTML, CSS y JavaScript, programo y gestiono servidores y networks de Minecraft,
+          diseño gráficos profesionales y edito contenido para YouTube con enfoque técnico y estético.
+        </p>
+        <div class="cta">
+          <a href="#contacto" class="btn primary">Contactar</a>
+          <a href="#proyectos" class="btn">Ver proyectos</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <p>Trabajo de forma directa, sin humo y con enfoque profesional. Esto es lo que hago y sé hacer bien.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Desarrollo Web</h3>
+          <p>Webs modernas, rápidas y mantenibles. Desde landings hasta sistemas completos sin frameworks innecesarios.</p>
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Minecraft Servers & Networks</h3>
+          <p>Configuración profesional de servidores, proxies, plugins, tiendas, seguridad y optimización real.</p>
+          <div class="tags">
+            <span class="tag">Paper</span><span class="tag">Velocity</span><span class="tag">Plugins</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Diseño Gráfico</h3>
+          <p>Identidad visual, logos, banners y gráficos limpios, pensados para marcas y comunidades.</p>
+          <div class="tags">
+            <span class="tag">Miniaturas</span><span class="tag">Logos</span><span class="tag">Banners</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>YouTube & Miniaturas</h3>
+          <p>Edición de vídeo y miniaturas con criterio visual y enfoque en CTR, no en saturación.</p>
+          <div class="tags">
+            <span class="tag">Edición</span><span class="tag">Miniaturas</span><span class="tag">YouTube</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos destacados</h2>
+      <p>Selección de trabajos reales relacionados con desarrollo, Minecraft y creación digital.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>Minewater</span>
+          <p>Webs, launcher, sistemas internos y branding para una network y proyectos derivados.</p>
+        </div>
+        <div class="timeline-item">
+          <span>Servidores Minecraft</span>
+          <p>Configuración completa de servidores survival, networks y tiendas con CraftingStore.</p>
+        </div>
+        <div class="timeline-item">
+          <span>Diseño & Media</span>
+          <p>Miniaturas, logos y material gráfico para creadores y comunidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Si buscas a alguien que sepa lo que hace y no venda promesas vacías, escríbeme.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Email</h3>
+          <p>vsergiors@gmail.com</p>
+        </div>
+        <div class="card">
+          <h3>Discord</h3>
+          <p>Cosas personales: soysergio_.vg</p>
+          <p>Cosas negocios: soysergio_.cg</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 vSergiors</span>
+      <span>Hecho a mano con HTML, CSS y JS</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
